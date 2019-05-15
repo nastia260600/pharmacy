@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Pharmasy.Shop"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Pharmasy"
+             mc:Ignorable="d" 
+             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             
+             d:DesignHeight="600" d:DesignWidth="1080" Loaded="UserControl_Loaded" FontFamily="Alien League">
+    <Grid Background="White">
+        <Image Source="C:\Users\User\Desktop\Pharmasy\Pharmasy\pharmacy.jpg" Height="600" Margin="-790 0 0 0"/>
+
+        <ListBox x:Name="medicamentsList" Margin = "350,0,-70,10" Width="800" ItemsSource="{Binding}" VirtualizingPanel.ScrollUnit="Pixel">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <StackPanel>
+                            <Label>
+                                <TextBlock FontSize="40"  Height="72" Text="{Binding Path=Name}" HorizontalAlignment="Left" />
+                            </Label>
+                            <TextBlock TextWrapping="Wrap" MaxWidth="350"  FontSize="18" Text="{Binding Path=Price}" HorizontalAlignment="Left" />
+                            <StackPanel Width="446">
+                                <TextBlock Foreground="#FF31577E" FontSize="30" Margin="0,0,40,0" Height="45" Text= "{Binding Path=Order}" HorizontalAlignment="Left" >  UAH</TextBlock>
+                                <materialDesign:PackIcon Kind="ShoppingCart" Height="25" Width="25"/>
+                                <Button Width="150" DataContext="{Binding Path=Id}" HorizontalAlignment="Right" Margin="0,-45,35,0" Name="Add" Content="Buy" Height="30" Click="AddToCart"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

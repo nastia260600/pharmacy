@@ -1,0 +1,22 @@
+﻿<Window x:Class="Pharmasy.StartPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pharmasy"
+        mc:Ignorable="d"
+        Title="StartPage" Height="462.366" Width="553.891" Icon="C:\Users\User\Desktop\Pharmasy\Pharmasy\ico1.ico" Background="{x:Null}" FontFamily="Alien League">
+    <Grid Margin="0,0,0,0" Loaded="DbSeed">
+        <Image Height="462.366" Width="553.891" Source="C:\Users\User\Desktop\Pharmasy\Pharmasy\drug.jpg" Margin="-4,0,-4,-31"/>
+        <StackPanel>
+
+            <Button Click="OpenAuthorizeWindow" Width="200" Height="40" FontSize="16" BorderBrush="#FF5566AB" Opacity="0.7" Background="#FF5566AB" Foreground="White" Margin="-280 200 0 0" Content="LOGiN"/>
+            <Button Click="OpenRegisterWindow"  Width="200" Height="40" FontSize="16" BorderBrush="#FF5566AB" Opacity="0.7" Background="#FF5566AB" Foreground="White" Margin="-280 20 0 0" Content="SiGN iN" />
+
+
+
+        </StackPanel>
+
+
+    </Grid>
+</Window>
